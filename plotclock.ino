@@ -1,3 +1,5 @@
+
+
 // Plotclock
 // cc - by Johannes Heberlein 2014
 // v 1.01
@@ -9,7 +11,7 @@
 // time library see http://playground.arduino.cc/Code/time 
 
 // delete or mark the next line as comment when done with calibration  
-#define CALIBRATION
+//#define CALIBRATION
 
 // When in calibration mode, adjust the following factor until the servos move exactly 90 degrees
 #define SERVOFAKTOR 620
@@ -17,6 +19,8 @@
 // Zero-position of left and right servo
 // When in calibration mode, adjust the NULL-values so that the servo arms are at all times parallel
 // either to the X or Y axis
+//#define SERVOLEFTNULL 1900
+//#define SERVORIGHTNULL 984
 #define SERVOLEFTNULL 1900
 #define SERVORIGHTNULL 984
 
@@ -25,9 +29,12 @@
 #define SERVOPINRIGHT 4
 
 // lift positions of lifting servo
-#define LIFT0 1080 // on drawing surface
-#define LIFT1 925  // between numbers
-#define LIFT2 725  // going towards sweeper
+//#define LIFT0 1080 // on drawing surface
+//#define LIFT1 925  // between numbers
+//#define LIFT2 725  // going towards sweeper
+#define LIFT0 1480 // on drawing surface
+#define LIFT1 1325  // between numbers
+#define LIFT2 1125  // going towards sweeper
 
 // speed of liftimg arm, higher is slower
 #define LIFTSPEED 1500
@@ -46,7 +53,7 @@
 
 
 
-#include <Time.h> // see http://playground.arduino.cc/Code/time 
+#include <Time.h>
 #include <Servo.h>
 
 int servoLift = 1500;
